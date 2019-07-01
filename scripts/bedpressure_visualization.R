@@ -18,7 +18,7 @@ bedpressure <- function(nbr, hotels){
     
     addLegend("bottomright", pal = pal, values = nbr$hotelbed_pressure,
               title = "Bed pressure (%)",
-              opacity = 0.5, na.label = "No beds") %>%
+              opacity = 0.5, na.label = "No beds", group = "Hotel Beds") %>%
     addMarkers(data=hotels, clusterOptions = markerClusterOptions(), popup = ~popup) %>%
     addLayersControl(
       baseGroups = c("Hotel Beds", "AirBnB Beds"),

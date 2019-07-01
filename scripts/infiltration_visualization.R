@@ -29,6 +29,10 @@ infiltration <- function(nbr){
                   fillColor = ~pal(dist2hot2019),
                   highlightOptions = highlightOptions(color = "white", weight = 2,
                                                       bringToFront = TRUE), popup = ~airbnbpopup,group="2019") %>%
+      addLegend("bottomright", pal = pal, values = nbr$dist2hot2019,
+                title = HTML("avg. distance <br/>airbnb-hotel"),
+                opacity = 0.5, na.label = "No beds") %>%
+      
       addLayersControl(
         baseGroups = c("2015", "2016", "2017", "2018", "2019"),
         options = layersControlOptions(collapsed = FALSE))

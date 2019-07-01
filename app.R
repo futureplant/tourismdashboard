@@ -1,17 +1,22 @@
+# load libraries
 library(shiny)
 library(shinydashboard)
 library(leaflet)
 library(shinyLP)
+library(sf)
+library(ggplot2)
 
 source('ui.R')
 source('scripts/infiltration_visualization.R')
 source('scripts/bedpressure_visualization.R')
 source('scripts/socialmedia_visualization.R')
+source('scripts/cluster_visualization.R')
 
 nbr <- st_read('data/neighbourhoods.geojson')
 hotels <- st_read('data/hotels.geojson')
 flickr <- st_read('data/GeotaggedFlickr_24june2019.geojson')
 twitter <- st_read('data/tweets.geojson')
+clusters <- st_read('data/clusternbr.geojson')
 url3d <- "https://williamtjiong.github.io/fairbnb-airbnbmapdeck/"
 
 server <- function(input, output, session) {
@@ -28,10 +33,26 @@ server <- function(input, output, session) {
   })
   
   output$frame <- renderUI({
-    map3d <- tags$iframe(src=url3d, height=600, width=535)
+    map3d <- tags$iframe(src=url3d, height=600, width="100%")
     map3d
     })
   
+  output$clustermap <- renderLeaflet({
+    cluster(clusters)
+  })
+  
+  output$hashtagplot <- renderPlot({
+    df_twitter <- read.csv(file="./data/tourist_pct.csv", header=TRUE, sep=",")
+    # Draw plot
+    plotje <- ggplot(df_twitter, aes(x=hashtag, y=pct)) + 
+      geom_bar(stat="identity", width=.5, fill=rainbow(n=length(df_twitter$hashtag))) + 
+      labs(title="Percentage of tourists per hashtag",
+           caption="source: Twitter") + 
+      theme(axis.text.x = element_text(angle=65, vjust=0.6))+
+      xlab('Hashtag')+ylab('%')
+    plotje
+    
+  })
   
   
 }
