@@ -37,7 +37,7 @@ body <- dashboardBody(
                             <p align='justify'>The popularity of accommodation places has an impact towards communities and housing market in Amsterdam.
 Increasing number of accommodations and beds means more places for travelers to stay which leads to increasing pressure in the city and sentiment towards tourism. 
                             Hence, data regarding number of beds can be used as an indicator in explaining the capacity of the city.
-                            Tourist intensity, calculated as the number of beds per inhabitant, is a common index used to assess the relative importance of tourism (Gutiérrez et al., 2017; Silva, et al., 2018). 
+                            Tourist intensity, calculated as the number of beds per inhabitant, is a common index used to assess the relative importance of tourism (Gutierrez et al., 2017; Silva, et al., 2018). 
                             The next map shows both the tourist intensities based on hotel (2014) and Airbnb listing data (2015-2019). <br/ > 
                             </p></p>"), 
                                 width = NULL, solidHeader = TRUE
