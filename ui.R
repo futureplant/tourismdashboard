@@ -1,4 +1,8 @@
-# TOURISM
+##########################################################################
+## Script that handles ui part of the shiny dashboard                    #         
+##    No inputs                                                          #  
+##    Output is ui object                                                #
+##########################################################################
 
 
 sidebar <- dashboardSidebar(
