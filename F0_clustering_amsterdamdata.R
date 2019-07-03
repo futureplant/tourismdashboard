@@ -1,6 +1,6 @@
 ###################################################################################################################################################
 ## Script that performs a clustering analysis on retrieved data for the neihbourhoods of Amsterdam as described in Chapter 4 of the report        #
-##    Inputs are data retrieved in scripts with an A prefix but can be adjusted to incorporte more variables                                      #
+##    Inputs are data retrieved in scripts with an A prefix but can be adjusted to incorporate more variables                                     #
 ##    Output is a geojson and a leaflet visualization of the clustered neighbourhoods                                                             #
 ###################################################################################################################################################
 
