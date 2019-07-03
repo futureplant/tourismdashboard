@@ -13,10 +13,10 @@ library(sf)
 library(ggplot2)
 
 source('ui.R')
-source('scripts/infiltration_visualization.R')
-source('scripts/bedpressure_visualization.R')
-source('scripts/socialmedia_visualization.R')
-source('scripts/cluster_visualization.R')
+source('scripts/G_infiltration_visualization.R')
+source('scripts/G_bedpressure_visualization.R')
+source('scripts/G_socialmedia_visualization.R')
+source('scripts/G_cluster_visualization.R')
 
 # read data ----------------------------------------
 nbr <- st_read('output/neighbourhoods.geojson')
@@ -29,27 +29,34 @@ url3d <- "https://williamtjiong.github.io/fairbnb-airbnbmapdeck/"
 
 # construct server ----------------------------------
 server <- function(input, output, session) {
+  
+  # render infiltration visualization
   output$infiltrationmap <- renderLeaflet({
     infiltration(nbr)
     })
   
+  # render bedpressure visualization
   output$bedpressuremap <- renderLeaflet({
     bedpressure(nbr,hotels)
     })
   
+  # render social media analysis visualization
   output$socialmediamap <- renderLeaflet({
     FlickrTwitter(flickr,twitter)
   })
   
+  # render 3d infiltration visualization
   output$frame <- renderUI({
     map3d <- tags$iframe(src=url3d, height=600, width="100%")
     map3d
     })
   
+  # render cluster visualization
   output$clustermap <- renderLeaflet({
     cluster(clusters)
   })
   
+  # render twitter validation plot
   output$hashtagplot <- renderPlot({
     df_twitter <- read.csv(file="./data/tourist_pct.csv", header=TRUE, sep=",")
     # Draw plot

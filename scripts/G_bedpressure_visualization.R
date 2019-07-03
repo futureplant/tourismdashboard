@@ -1,3 +1,8 @@
+##########################################################################
+## Script that makes a leaflet visualization of bedpressure              #         
+##    Inputs are neighbourhood and hotel geojson                         #  
+##    Output is a leaflet visualization                                  #
+##########################################################################
 
 bedpressure <- function(nbr, hotels){
   bins <- c(0, 10, 25, 50, 100)

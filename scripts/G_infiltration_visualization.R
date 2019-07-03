@@ -1,3 +1,8 @@
+#########################################################################
+## Script that makes a leaflet visualization of airbnb infiltration     #         
+##    Inputs is neighbourhood geojson                                   #  
+##    Output is a leaflet visualization                                 #
+#########################################################################
 
 infiltration <- function(nbr){
     pal <- colorNumeric("YlOrRd", c(nbr$dist2hot2019,nbr$dist2hot2018,nbr$dist2hot2017,nbr$dist2hot2016,nbr$dist2hot2015),

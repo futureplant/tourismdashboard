@@ -1,4 +1,8 @@
-#function to create Flickr and Twitter Lealet
+#########################################################################
+## Script that makes a leaflet visualization of the social media data   #         
+##    Inputs are twitter and flickr geojsons                            #  
+##    Output is a leaflet visualization                                 #
+#########################################################################
 
 FlickrTwitter <- function(flickr_geojson,twitter_geojson){
 

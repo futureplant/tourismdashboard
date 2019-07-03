@@ -1,3 +1,8 @@
+##########################################################################
+## Script that makes a leaflet visualization of neighbourhood clustering #         
+##    Inputs is neighbourhood geojson                                    #  
+##    Output is a leaflet visualization                                  #
+##########################################################################
 
 cluster <- function(nghbrhd){
   
