@@ -1,3 +1,9 @@
+###############################################################################################################
+## Script that deals with the airbnb and hotel data as described in paragraph 4.2 of the report               #
+##    Inputs are municipal data regarding hotels and airbnb data collected by InsideAirBnB                    #
+##    Output is a geojson and a leaflet visualization                                                         #
+###############################################################################################################
+
 # main script for data analysis
 
 # libraries and scripts
