@@ -14,7 +14,7 @@ library(htmltools)
 library(htmlwidgets)
 library(tidyverse)
 
-source('scripts/addresslocator.R')
+source('scripts/A1_addresslocator.R')
 
 
 # loading and preprocessing hotel data -------------------------------------
