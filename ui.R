@@ -38,7 +38,7 @@ body <- dashboardBody(
 Increasing number of accommodations and beds means more places for travelers to stay which leads to increasing pressure in the city and sentiment towards tourism. 
                             Hence, data regarding number of beds can be used as an indicator in explaining the capacity of the city.
                             Tourist intensity, calculated as the number of beds per inhabitant, is a common index used to assess the relative importance of tourism (Gutierrez et al., 2017; Silva, et al., 2018). 
-                            The next map shows both the tourist intensities based on hotel (2014) and Airbnb listing data (2015-2019). <br/ > 
+                            The next map shows both the tourist intensities based on hotel (2014) and Airbnb listing data (2015-2019). The data on hotel beds was gathered from the open data platform of the municipality of Amsterdam. The data on the AirBnB beds was gathered from the InsideAirBnB website. <br/ > 
                             </p></p>"), 
                                 width = NULL, solidHeader = TRUE
                             )))),
@@ -64,7 +64,7 @@ Increasing number of accommodations and beds means more places for travelers to 
                                       10-10 photos taken in a month : domestic
                                       <10 photos taken in a month: local 
                                       
-                                      The map shows the distribution of residents and tourists across cities very well. Geotagged tweets are a textual representation of people's behaviour at a given time and place. The data created from tagging tweets with their location can be used in a number of interesting ways. By looking at what and where in Amsterdam the tourists tweet we get and idea about the tourist density and hot-spot of tourists. For further research is also potential with this kind of data to learn about spatio-temporal pattern for example tourist's behaviour (Di Minin et al., 2015).<br/ > 
+                                      The map shows the distribution of residents and tourists across cities very well. Geotagged tweets are a textual representation of people's behaviour at a given time and place. The data created from tagging tweets with their location can be used in a number of interesting ways. By looking at what and where in Amsterdam the tourists tweet we get and idea about the tourist density and hot-spot of tourists. For further research is also potential with this kind of data to learn about spatio-temporal pattern for example tourist's behaviour (Di Minin et al., 2015). The Flickr data was gathered using the API provided by Flickr and the Twitter data was gathere using an API provided by Twitter<br/ > 
                                      </p></p>"), 
                                 width = NULL, solidHeader = TRUE
                             )))),
@@ -75,7 +75,7 @@ Increasing number of accommodations and beds means more places for travelers to 
                      column(width = 3,
                             # Construct box with image and introductory text for the app
                             box(HTML("<strong>DAirBnB Infiltration 3D</strong><br/>
-                                     <p align='justify'>In order to be able to not only account for the average distance, but also the number of AirBnB addressesm we added an extra dimension to the map that corresponds with airbnb Bed Pressure<br/ > 
+                                     <p align='justify'>In order to be able to not only account for the average distance, but also the number of AirBnB addresses, we added an extra dimension to the map that corresponds with airbnb Bed Pressure<br/ > 
                                      </p></p>"), 
                                 width = NULL, solidHeader = TRUE
                             )))),
