@@ -1,4 +1,10 @@
-# load libraries
+#####################################################################################
+## Script that builds a shiny dashboard that includes all leafletvisualizations     #
+##    Inputs are outputs from A,B,C,D,E,F parts of project                          #
+##    Output is a shiny dashboard that runs on our server                           #
+#####################################################################################
+
+# load libraries and source scripts ---------------
 library(shiny)
 library(shinydashboard)
 library(leaflet)
@@ -12,13 +18,16 @@ source('scripts/bedpressure_visualization.R')
 source('scripts/socialmedia_visualization.R')
 source('scripts/cluster_visualization.R')
 
-nbr <- st_read('data/neighbourhoods.geojson')
+# read data ----------------------------------------
+nbr <- st_read('output/neighbourhoods.geojson')
 hotels <- st_read('data/hotels.geojson')
 flickr <- st_read('data/GeotaggedFlickr_24june2019.geojson')
 twitter <- st_read('data/tweets.geojson')
 clusters <- st_read('data/clusternbr.geojson')
 url3d <- "https://williamtjiong.github.io/fairbnb-airbnbmapdeck/"
 
+
+# construct server ----------------------------------
 server <- function(input, output, session) {
   output$infiltrationmap <- renderLeaflet({
     infiltration(nbr)
