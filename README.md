@@ -22,7 +22,7 @@ Geotagged Flickr posts
 
 C - Geotagged Flickr. This shows where in the city people took photo's. This can give an insight in where tourists are moving withing the city. This corresponds with section 3.3.2 of the report
 
-TripAvisor 
+TripAdvisor 
 
 D - TripAdvisor. This performs linear regression on a small dataset to see if it is possible to make a prediction on how much people visit musea based on TripAdvisor reviews. This corresponds with section 3.3.3 of the report.
 
