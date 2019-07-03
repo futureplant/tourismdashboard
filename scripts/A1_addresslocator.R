@@ -1,4 +1,9 @@
-# Function that takes in address string and returns dataframe containing longitude and latitude in WGS84
+###############################################################################
+## Script that geolocates buildings on the basis of their address             #
+##    Inputs is address string                                                #
+##    Output is a dataframe with longitude and latitude in WGS84              #
+###############################################################################
+
 
 # load libraries
 library(httr)
