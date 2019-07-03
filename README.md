@@ -11,19 +11,25 @@ We will give a short description about the different scripts that handle parts o
 
 
 Airbnb and hotel beds
+
 A - Airbnb and hotel beds. This shows something about the density and pressure of beds per inhabitant of the neighbourhood. This corresponds with section 3.2.1 of the report.
 
-Geotagged tweets
+Geotagged Tweets
+
 B - Geotagged tweets. This shows where in the city the people tweet about what they are doing. This can give an insight in where tourists are moving withing the city. This corresponds with section 3.3.1 of the report
 
-Geotagged Flickr
+Geotagged Flickr posts
+
 C - Geotagged Flickr. This shows where in the city people took photo's. This can give an insight in where tourists are moving withing the city. This corresponds with section 3.3.2 of the report
 
 TripAvisor 
+
 D - TripAdvisor. This performs linear regression on a small dataset to see if it is possible to make a prediction on how much people visit musea based on TripAdvisor reviews. This corresponds with section 3.3.3 of the report.
 
 Shop Establishments
+
 E - Shop Establishments. This gets the on and shows where in the city souvenir shops are located. This corresponds with 3.4.2 of the report.
 
 Cluster Analysis.
+
 F - Cluster Analysis. This performs and shows the cluster analysis. It gives an insight which accomodations are most present in which neighbourhood. This corresponds to section 4 of the report
