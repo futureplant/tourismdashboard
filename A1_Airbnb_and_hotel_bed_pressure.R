@@ -4,7 +4,6 @@
 ##    Output is a geojson and a leaflet visualization                                                                      #
 ############################################################################################################################
 
-# main script for data analysis
 
 # libraries and scripts
 library(geojsonio)
